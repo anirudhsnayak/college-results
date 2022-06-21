@@ -1,0 +1,7 @@
+%reset{
+    margin:0;
+    padding: 0px;
+}
+:global(body, html, p, h1){
+    @extend %reset;
+}
