@@ -144,7 +144,7 @@
     }
     .modal-close-button{
         /* make it an x */
-        background-image: url("images/close.png");
+        background-image: url("../images/close.png");
         height: 2rem;
         width: 2rem;
         background-position: center;

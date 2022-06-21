@@ -31,7 +31,7 @@
         padding-top: 1rem;
     }
     .faqBubble{
-        background-image: url("images/faq_icon.png");
+        background-image: url("../images/faq_icon.png");
         background-position: center;
         background-size: auto 3rem;
         justify-self: end;
