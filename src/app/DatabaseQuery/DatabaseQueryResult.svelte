@@ -99,6 +99,9 @@
         padding: 0;
         margin: 0;
     }
+    .triangle:hover{
+        cursor: pointer;
+    }
     .triangle-true{
         transform: scaleY(0.7) rotate(90deg);
     }

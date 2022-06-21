@@ -7,6 +7,7 @@
     let queries = [];
     let displayedQueries = [];
     let currentPage = 0;
+    let currentTotalPages = 0;
 
     //make a function to change the displayed queries based on page
     function pickDisplayedQueries(page) {
@@ -21,6 +22,21 @@
     function update(){
         updated = true;
         queries = Database.getQueryResult();
+        currentPage = 0;
+        currentTotalPages = Math.ceil(queries.length / pageSize);
+        render();
+    }
+    function changePage(event){
+        console.log(event);
+        currentPage += event.detail.pageIncrease;
+        if(currentPage>=currentTotalPages){
+            currentPage = currentTotalPages-1;
+        } else if(currentPage<0){
+            currentPage = 0;
+        } 
+        render();
+    }
+    function render(){
         displayedQueries = pickDisplayedQueries(currentPage);
     }
     Database.subscribeQuery({update});
@@ -36,7 +52,7 @@
 {:else}
     <div class="results">
         <h1>{queries.length} results </h1>
-        <DatabaseQueryPageSelect page={currentPage} totalPages= {Math.ceil(queries.length / pageSize)}/>
+        <DatabaseQueryPageSelect page={currentPage} totalPages={currentTotalPages} on:pageChange={changePage}/>
         <br>
     </div>
 {/if}
