@@ -20,7 +20,7 @@
         <div class="modal-content">
             <p>
                 As the name implies, this is a college application results viewer for the US. 
-                The data is sourced from <a href="https://www.reddit.com/r/collegeresults">r/collegeresults</a>.
+                The data is sourced from <a href="https://www.reddit.com/r/collegeresults" target="_blank">/r/collegeresults</a>
             </p>
             <h3>How do I use this?</h3>
             <p>
