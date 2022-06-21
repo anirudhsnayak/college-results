@@ -19,7 +19,7 @@
 }
 .privacy-policy{
     align-self: end;
-    justify-self: center;
+    justify-self: end;
     margin-right: 1rem;
     margin-bottom: 1rem;
 }
